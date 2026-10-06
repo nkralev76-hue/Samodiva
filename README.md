@@ -9,11 +9,12 @@ part of this repository.
 
 ## Quick start
 
-Download **`binaries/1.5-nnue/Samodiva-1.5-x64.zip`** (1.1 MB), unpack it
+Download **`binaries/1.5-nnue/Samodiva-1.5-x64.zip`** (1.9 MB), unpack it
 anywhere, and run `samodiva_nnue_tb.exe`. It contains everything needed:
 
 ```
 samodiva_nnue_tb.exe     the engine (UCI), with Syzygy tablebase support
+samodiva_nnue.exe      the same engine without tablebase support
 samodiva.nnue       the evaluation network — keep it in the same folder
 READ ME FIRST.txt   short instructions
 ```
@@ -28,7 +29,7 @@ evaluation and plays about 250 Elo weaker.
 
 | Path | Contents |
 |---|---|
-| `binaries/1.5-nnue/Samodiva-1.5-x64.zip` | **ready-to-use pack, 1.1 MB** — engine + network + readme |
+| `binaries/1.5-nnue/Samodiva-1.5-x64.zip` | **ready-to-use pack, 1.9 MB** — both engines + network + readme |
 | `binaries/1.0` … `binaries/1.4` | Windows builds of every released version |
 | `binaries/1.5-nnue/` | the current version, unpacked: engine, tablebase build and the network |
 | `nets/` | the other networks, published for research |
