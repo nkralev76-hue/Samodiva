@@ -1,8 +1,8 @@
-# Samodiva
+﻿# Samodiva
 
 A chess engine by **Nikolay Kralev**.
 
-Binaries and network files only — the source code is proprietary and is not
+Binaries and network files only вЂ” the source code is proprietary and is not
 part of this repository.
 
 ---
@@ -11,9 +11,9 @@ part of this repository.
 
 | Path | Contents |
 |---|---|
-| `binaries/1.0` … `binaries/1.4` | Windows builds of every released version |
+| `binaries/1.0` вЂ¦ `binaries/1.4` | Windows builds of every released version |
 | `binaries/1.4/samodiva_tuned.exe` | 1.4 with the tuned evaluation (prebuilt) |
-| `binaries/1.5-nnue/` | **current version** — NNUE assisted, **network included** |
+| `binaries/1.5-nnue/` | **current version** вЂ” NNUE assisted, **network included** |
 | `nets/` | the other networks, published for research |
 | `docs/` | measured strength results |
 
@@ -33,9 +33,9 @@ illegal instruction. The price is a few percent of speed on a modern CPU.
 1.3, whose evaluation is identical). It was trained against exactly that
 evaluation, therefore:
 
-* **1.5** — keep `samodiva.nnue` next to the executable. It is already in the
+* **1.5** вЂ” keep `samodiva.nnue` next to the executable. It is already in the
   download folder and the engine loads it automatically; nothing to configure.
-* **1.0 … 1.4** — **do not copy the network there.** Those versions have their
+* **1.0 вЂ¦ 1.4** вЂ” **do not copy the network there.** Those versions have their
   own (older or tuned) evaluation and the corrections do not apply to them.
   Measured cost of forcing it on 1.4: about 115 Elo.
 
@@ -45,7 +45,7 @@ evaluation, therefore:
 
 Version 1.5 adds a neural network on top of the hand written evaluation. The
 network is loaded from the file named in the `NNUEFile` option and the engine
-works out from the file itself what kind of network it is — no options need to
+works out from the file itself what kind of network it is вЂ” no options need to
 be set.
 
 ### Options added in 1.5
@@ -77,20 +77,20 @@ opening book of 25 standard openings. Full details in
 
 | Match | Games | Score | Elo |
 |---|---|---|---|
-| **1.5 vs 1.3 — SPRT, α = β = 0.05, H1 accepted** | **563** | **63.5 %** | **+96 ± 21** |
-| 1.5 vs 1.3 (confirmation run, default options) | 100 | 61.5 % | +81 ± 48 |
-| 1.5 + tablebases vs 1.3 + tablebases | 100 | 58.5 % | +60 ± 48 |
-| 1.3 vs Houdini 1.5a | 100 | 22.5 % | −215 ± 68 |
-| **1.5 vs Houdini 1.5a** | 100 | **34.0 %** | **−115 ± 60** |
+| **1.5 vs 1.3 вЂ” SPRT, О± = ОІ = 0.05, H1 accepted** | **563** | **63.5 %** | **+96 В± 21** |
+| 1.5 vs 1.3 (confirmation run, default options) | 100 | 61.5 % | +81 В± 48 |
+| 1.5 + tablebases vs 1.3 + tablebases | 100 | 58.5 % | +60 В± 48 |
+| 1.3 vs Houdini 1.5a | 100 | 22.5 % | в€’215 В± 68 |
+| **1.5 vs Houdini 1.5a** | 100 | **34.0 %** | **в€’115 В± 60** |
 
 Against an external engine the network is worth **+100 Elo**
-(Houdini 1.5a: 22.5 % → 34.0 % when the network is enabled).
+(Houdini 1.5a: 22.5 % в†’ 34.0 % when the network is enabled).
 
 The engine is strongly time-control dependent:
 
 | Time control | 1.5 vs Houdini 1.5a |
 |---|---|
-| 10s + 0.1s | −115 Elo |
+| 10s + 0.1s | в€’115 Elo |
 | 300s per move | +97 Elo (11 games) |
 
 Its time management spends about 1/40 of the remaining clock per move, so a
@@ -105,7 +105,7 @@ mate handling, incremental accumulator verification and Syzygy probing.
 
 | File | Type | Notes |
 |---|---|---|
-| **`binaries/1.5-nnue/samodiva.nnue`** | **residual, 768-256** | **the shipped network, +96 Elo — use this one** |
+| **`binaries/1.5-nnue/samodiva.nnue`** | **residual, 768-256** | **the shipped network, +96 Elo вЂ” use this one** |
 | `samodiva_v3_rr50.nnue` | residual, 768-256 | identical backup of the above |
 | `nets/samodiva_v1.nnue` | absolute, 768-256 | first generation, weaker |
 | `nets/samodiva_v2.nnue` | absolute, 768-256 | second generation, weaker |
@@ -117,9 +117,9 @@ mate handling, incremental accumulator verification and Syzygy probing.
 The absolute networks are published for research. None of them is stronger
 than the shipped residual network: a network that replaces the classical
 evaluation completely loses accuracy on endgame positions, which is where most
-of the search tree lives (measured: 25–38 % sign agreement there versus 58 % for
-the hand written evaluation). The residual design — a bounded correction on top
-of the hand written evaluation — is what makes 1.5 strong.
+of the search tree lives (measured: 25вЂ“38 % sign agreement there versus 58 % for
+the hand written evaluation). The residual design вЂ” a bounded correction on top
+of the hand written evaluation вЂ” is what makes 1.5 strong.
 
 Network files carry a four byte header that identifies their type, so the engine
 never guesses wrong.
