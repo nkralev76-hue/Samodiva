@@ -30,7 +30,6 @@ evaluation and plays about 250 Elo weaker.
 |---|---|
 | `binaries/1.5-nnue/Samodiva-1.5-x64.zip` | **ready-to-use pack, 1.1 MB** — engine + network + readme |
 | `binaries/1.0` … `binaries/1.4` | Windows builds of every released version |
-| `binaries/1.4/samodiva_tuned.exe` | 1.4 with the tuned evaluation (prebuilt) |
 | `binaries/1.5-nnue/` | the current version, unpacked: engine, tablebase build and the network |
 | `nets/` | the other networks, published for research |
 | `docs/` | measured strength results |
@@ -40,7 +39,7 @@ tablebase support (it needs a tablebase path, see below).
 
 ### Runs on any machine
 
-Every binary except `samodiva_tuned.exe` is compiled for the plain **x86-64
+Every binary here is compiled for the plain **x86-64
 baseline** instead of the CPU of the build machine, so it also starts on older
 processors and on CPUs without AVX2, where a `-march=native` build dies with an
 illegal instruction. The price is a few percent of speed on a modern CPU.
