@@ -1,0 +1,46 @@
+SAMODIVA 1.5 - x64 (Windows)
+==============================
+
+Unpack anywhere and run:
+
+    samodiva_nnue_tb.exe      <- the strongest build, with Syzygy tablebases
+
+Files
+-----
+samodiva_nnue_tb.exe    engine with tablebase support
+samodiva_nnue.exe       engine without tablebase support
+samodiva.nnue           evaluation network (keep it in this folder)
+
+The engine loads samodiva.nnue automatically - no options to set.
+Remove the .nnue file and you lose about 100 Elo.
+
+Tablebases (optional)
+---------------------
+Tablebases are NOT part of the network file. To use them, download a Syzygy
+set (DTZ recommended) and tell the engine where it is:
+
+    setoption name SyzygyPath value D:\syzygy
+
+Only samodiva_nnue_tb.exe understands that option.
+
+Check that it works
+-------------------
+Run samodiva_nnue_tb.exe. It should print:
+
+    NNUE mode residual, clamp 50
+    NNUE loaded from samodiva.nnue
+
+If it says "NNUE loaded" without "mode", you are fine.
+If it loads no network, the .nnue file is not next to the executable.
+
+Any UCI program can use it:
+
+    uci
+    isready
+    position startpos
+    go movetime 10000
+
+Runs on any 64-bit Windows CPU (no AVX2 or other extensions needed).
+For older versions (1.0 - 1.4) download the folders next to this one.
+
+(c) 2026 Nikolay Kralev - MIT license

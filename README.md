@@ -1,4 +1,4 @@
-﻿# Samodiva
+# Samodiva
 
 A chess engine by **Nikolay Kralev**.
 
@@ -10,10 +10,10 @@ part of this repository.
 ## Quick start
 
 Download **`binaries/1.5-nnue/Samodiva-1.5-x64.zip`** (1.1 MB), unpack it
-anywhere, and run `samodiva_tb.exe`. It contains everything needed:
+anywhere, and run `samodiva_nnue_tb.exe`. It contains everything needed:
 
 ```
-samodiva_tb.exe     the engine (UCI), with Syzygy tablebase support
+samodiva_nnue_tb.exe     the engine (UCI), with Syzygy tablebase support
 samodiva.nnue       the evaluation network — keep it in the same folder
 READ ME FIRST.txt   short instructions
 ```
@@ -34,7 +34,7 @@ evaluation and plays about 250 Elo weaker.
 | `nets/` | the other networks, published for research |
 | `docs/` | measured strength results |
 
-`samodiva.exe` is the plain build, `samodiva_tb.exe` the build with Syzygy
+`samodiva_nnue.exe` is the plain build, `samodiva_nnue_tb.exe` the build with Syzygy
 tablebase support (it needs a tablebase path, see below).
 
 ### Runs on any machine
@@ -83,7 +83,7 @@ loading an older absolute network switches the engine into plain
 setoption name SyzygyPath value E:\path\to\syzygy
 ```
 
-The support is compiled into `samodiva_tb.exe`; the plain `samodiva.exe` has no
+The support is compiled into `samodiva_nnue_tb.exe`; the plain `samodiva_nnue.exe` has no
 Syzygy options at all. Tablebases are not part of the network file.
 
 ---
@@ -151,7 +151,7 @@ Samodiva speaks UCI.
 
 ```
 cd binaries\1.5-nnue
-samodiva_tb.exe
+samodiva_nnue_tb.exe
 ```
 
 ```
