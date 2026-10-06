@@ -1,0 +1,57 @@
+# Samodiva — binaries and networks
+
+This repository contains **binaries and network files only**. The engine source
+code is proprietary and deliberately not published.
+
+## Ignore patterns
+
+*.cpp
+*.c
+*.h
+*.o
+*.obj
+*.py
+*.pdb
+*.ilk
+*.bin
+!*.nnue
+
+## Build output that must never be committed
+
+build/
+build_tmp/
+release/build/
+out/
+debug/
+*.exe.tmp
+
+## Local match data
+
+match_*/
+*.pgn
+*.epd
+stdout.txt
+stderr.txt
+*.log
+*.pid
+stats.json
+
+## Training data and intermediate artefacts (tens of GB)
+
+train*.bin
+*.npy
+*.jsonl
+selected*.jsonl
+games*.jsonl
+holdout*.jsonl
+__pycache__/
+*.pyc
+
+## Editor / OS
+
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store
